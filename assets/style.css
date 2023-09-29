@@ -1,0 +1,18 @@
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+header {
+    background: #4CAF50;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+nav a:hover,
+li.active a {
+    color: #4CAF50;
+}
