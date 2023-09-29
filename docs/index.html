@@ -1,51 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>AI Model Showcase</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/webdesign/style.css">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      />
+  </head>
+  <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">AI Model Showcase</a>
-        <div class="collapse navbar-collapse">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#overview">Overview</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#models">Models</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="docs/README.md" target="_blank">Documentation</a>
-                </li>
-            </ul>
-        </div>
+      <a class="navbar-brand" href="#">AI Model Showcase</a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#overview">Overview</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#models">Models</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="docs/README.md" target="_blank"
+              >Documentation</a
+            >
+          </li>
+        </ul>
+      </div>
     </nav>
     <header class="bg-primary text-white text-center py-5 mb-4">
-        <div class="container">
-            <h1 class="font-weight-light">AI Models by [Your Name]</h1>
-        </div>
+      <div class="container">
+        <h1 class="font-weight-light">AI Models by Hak</h1>
+      </div>
     </header>
     <div class="container">
-        <div id="overview" class="mb-5">
-            <h2>Overview</h2>
-            <p>A brief introduction or overview of your project.</p>
+      <div id="overview" class="mb-5">
+        <h2>Overview</h2>
+        <p>Some of my AI projects i made for fun using TensorFlow and Keras.</p>
+      </div>
+      <div id="models" class="mb-5">
+        <h2>Models</h2>
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Average read time model</h5>
+                <a
+                  href="/assets/AverageReadTime.ipynb"
+                  target="_blank"
+                  class="btn btn-primary"
+                  >Visit Model</a
+                >
+              </div>
+            </div>
+          </div>
         </div>
-        <div id="models" class="mb-5">
-            <h2>Models</h2>
-            <p>A brief description of each model, maybe with some visuals, links to the notebooks, etc.</p>
-            <ul class="list-group">
-                <li class="list-group-item">
-                    <a href="docs/model1.ipynb" target="_blank">Model 1</a>
-                </li>
-                <li class="list-group-item">
-                    <a href="docs/model2.ipynb" target="_blank">Model 2</a>
-                </li>
-                <!-- Add more models as list items here -->
-            </ul>
-        </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>
