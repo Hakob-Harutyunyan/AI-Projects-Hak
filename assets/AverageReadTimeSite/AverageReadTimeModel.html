@@ -15,7 +15,7 @@
           rows="5"
           placeholder="Type your paragraph here..."
         ></textarea>
-        <button onclick="predict()" class="predict-btn">Predict</button>
+        <button class="predict-btn">Predict</button>
       </div>
       <div id="result" class="result-tab">Result will appear here</div>
     </div>
@@ -24,7 +24,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
       $(document).ready(function () {
-        $(".btn").click(function (event) {
+        $(".predict-btn").click(function (event) {
           event.preventDefault(); // Prevent the default action
           var link = $(this).attr("href");
 
