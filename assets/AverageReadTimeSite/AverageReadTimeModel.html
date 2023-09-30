@@ -1,21 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Average read-time calculator</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <a href="../../docs/index.html" class="home-icon">🏠</a>
-        <div class="input-area">
-            <textarea id="inputText" rows="5" placeholder="Type your paragraph here..."></textarea>
-            <button onclick="predict()" class="predict-btn">Predict</button>
-        </div>
-        <div id="result" class="result-tab">Result will appear here</div>
+      <a href="../../docs/index.html" class="home-icon">🏠</a>
+      <div class="input-area">
+        <textarea
+          id="inputText"
+          rows="5"
+          placeholder="Type your paragraph here..."
+        ></textarea>
+        <button onclick="predict()" class="predict-btn">Predict</button>
+      </div>
+      <div id="result" class="result-tab">Result will appear here</div>
     </div>
 
     <script src="script.js"></script>
-</body>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".btn").click(function (event) {
+          event.preventDefault(); // Prevent the default action
+          var link = $(this).attr("href");
+
+          $.post("/on_button_click", { link: link }, function () {
+            window.location.href = link; // Redirect after sending data to server
+          });
+        });
+      });
+    </script>
+  </body>
 </html>
