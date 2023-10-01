@@ -27,9 +27,7 @@
           event.preventDefault(); // Prevent the default action
           var link = $(this).attr("href");
 
-          $.post("/on_button_click", { link: link }, function () {
-            window.location.href = link; // Redirect after sending data to server
-          });
+          $.post("/on_button_click", { link: link });
         });
       });
     </script>
