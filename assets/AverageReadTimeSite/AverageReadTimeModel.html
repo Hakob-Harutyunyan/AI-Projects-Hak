@@ -27,10 +27,10 @@
           event.preventDefault(); // Prevent the default action of <a> tag
           var link = $(this).attr("href");
 
-          $.post("/trigger_python", { link: link }, function (response) {
+          $.post("https://hakob-harutyunyan.github.io/assets/AverageReadTimeSite/trigger_python", { link: link }, function (response) {
             // Handle the response from the server if needed.
             // If you still want to redirect to the link after calling the python function:
-            window.location.href = link;
+            console.log(response);
           });
         });
       });
