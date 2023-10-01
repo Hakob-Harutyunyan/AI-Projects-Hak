@@ -24,10 +24,14 @@
     <script>
       $(document).ready(function () {
         $(".predict-btn").click(function (event) {
-          event.preventDefault(); // Prevent the default action
+          event.preventDefault(); // Prevent the default action of <a> tag
           var link = $(this).attr("href");
 
-          $.post("/on_button_click", { link: link });
+          $.post("/trigger_python", { link: link }, function (response) {
+            // Handle the response from the server if needed.
+            // If you still want to redirect to the link after calling the python function:
+            window.location.href = link;
+          });
         });
       });
     </script>

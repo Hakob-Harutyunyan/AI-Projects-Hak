@@ -19,16 +19,21 @@ def predict(text):
     return model.predict(eager_to_tensor_function(tokenizer(text)))\
 
 
+from flask import Flask, render_template, request
+
 app = Flask(__name__)
 
 @app.route('/')
 def home():
     return render_template('AverageReadTimeModel.html')
 
-
-@app.route('/on_button_click', methods=['POST'])
-def on_button_click():
-    # Execute your python function here.
+@app.route('/trigger_python', methods=['POST'])
+def trigger_python():
     link = request.form.get('link')
-    print(f'Button clicked: {link}')
-    return 'Button Click'
+    print(f'{link} was clicked')
+    # Here, call the python function you want to execute.
+    your_python_function()
+    return 'Function Triggered'
+
+def your_python_function():
+    print('Python Function Executed')
